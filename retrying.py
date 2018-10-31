@@ -195,6 +195,7 @@ class Retrying(object):
             result = self._wait_exponential_max
         if result < 0:
             result = 0
+        result = random.uniform(0, result)
         return result
 
     @staticmethod
